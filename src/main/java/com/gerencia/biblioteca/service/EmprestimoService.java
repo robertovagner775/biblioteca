@@ -42,8 +42,8 @@ public class EmprestimoService {
     }
 
     public ResponseEntity devolverEmprestimo(DevolucaoDto devolucaoDto) {
-      Emprestimo emprestimo =  emprestimoRepository.findByEmprestimoLivro(devolucaoDto.cpf(), devolucaoDto.nome_livro());
-      Livro livro = livroRepository.findByTitulo(devolucaoDto.nome_livro());
+      Emprestimo emprestimo =  emprestimoRepository.findByEmprestimoLivro(devolucaoDto.cpf(), devolucaoDto.id_livro());
+      Livro livro = livroRepository.findById(devolucaoDto.id_livro()).get();
       livro.setStatus(livro.getStatus().DISPONIVEL);
       livroRepository.save(livro);      
       emprestimoRepository.delete(emprestimo);

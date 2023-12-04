@@ -23,4 +23,8 @@ public class ClienteService {
     public ResponseEntity editCliente(@RequestBody Cliente cliente) {
         return ResponseEntity.ok().body(clienteRepository.save(cliente));
     }
+
+    public ResponseEntity viewClientes() {
+        return ResponseEntity.ok().body(clienteRepository.findAll());
+    }
 }

@@ -2,6 +2,7 @@ package com.gerencia.biblioteca.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,5 +28,10 @@ public class ClienteController {
     @PutMapping
     public ResponseEntity<?> editCliente(@RequestBody Cliente cliente) {
         return clienteService.editCliente(cliente);
+    }
+
+    @GetMapping
+    public ResponseEntity<?> viewCliente() {
+        return clienteService.viewClientes();
     }
 }

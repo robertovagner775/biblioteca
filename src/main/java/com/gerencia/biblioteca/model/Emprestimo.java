@@ -1,5 +1,7 @@
 package com.gerencia.biblioteca.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,9 +34,17 @@ public class Emprestimo {
     @JoinColumn(nullable = false, name = "id_cliente")
     private Cliente cliente;
 
+    private LocalDate dataEmprestimo;
+
+    private LocalDate dataDevolucao;
+
+    
+
     public Emprestimo(Livro livro, Cliente cliente) {
         this.livro = livro;
         this.cliente = cliente;
+        this.dataEmprestimo = LocalDate.now();
+        this.dataDevolucao = LocalDate.now().plusDays(15);
     }
     
 }

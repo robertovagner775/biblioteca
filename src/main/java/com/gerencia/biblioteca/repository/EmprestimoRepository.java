@@ -11,8 +11,8 @@ import com.gerencia.biblioteca.model.Emprestimo;
 @Repository
 public interface EmprestimoRepository extends JpaRepository<Emprestimo, Long> {
 
-    @Query("SELECT e FROM emprestimo e JOIN e.livro l JOIN e.cliente c WHERE c.cpf = :cpf AND l.titulo = :titulo")
-    Emprestimo findByEmprestimoLivro(String cpf, String titulo);
+    @Query("SELECT e FROM emprestimo e JOIN e.livro l JOIN e.cliente c WHERE c.cpf = :cpf AND l.id_livro = :id")
+    Emprestimo findByEmprestimoLivro(String cpf, Long id);
 
     List<Emprestimo> findByCliente_cpf(String cpf);
 }
