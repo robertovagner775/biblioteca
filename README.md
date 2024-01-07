@@ -1,9 +1,20 @@
 # Api REST de Gerenciamento De Uma Biblioteca Digital
 
+ *Video do Funcionamento da API  https://youtu.be/8o5ybquh8bE*
+
 ## Sobre o Projeto
 
 Necessidade de gerenciamento de muitos processos de uma biblioteca. Como saber á quem foi emprestado um determinado livro ou 
 quais livros estão disponíveis da biblioteca.
+
+## Funções Disponiveis
+
+- Realizar Emprestimo
+- Realizar Devolução
+- Adicionar, Remover e Editar Livros
+- Adicionar, Remover e Editar Editoras e Escritores
+- Adicionar Cliente e Editar
+  
 
 ## Situação Problema
 
