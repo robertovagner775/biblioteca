@@ -1,5 +1,6 @@
 package com.gerencia.biblioteca.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.Entity;
@@ -25,4 +26,7 @@ public class Cliente {
     private String cpf;
     private String rg;
     private Date dataNasc;
+
+  
+    private LocalDate penalidade;
 }

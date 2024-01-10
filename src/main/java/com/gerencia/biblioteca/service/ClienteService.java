@@ -24,6 +24,14 @@ public class ClienteService {
         return ResponseEntity.ok().body(clienteRepository.save(cliente));
     }
 
+
+    /* 
+    private Boolean verificaPenalidade() {
+        
+    }
+
+    */
+
     public ResponseEntity viewClientes() {
         return ResponseEntity.ok().body(clienteRepository.findAll());
     }

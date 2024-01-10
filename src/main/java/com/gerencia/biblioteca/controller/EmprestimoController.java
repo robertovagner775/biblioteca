@@ -44,8 +44,8 @@ public class EmprestimoController {
     }
 
     @GetMapping(value = "/cpf")
-    public ResponseEntity<Emprestimo> visualizarEmprestimoCpf(@RequestParam("cpf") String cpf) {
-        return emprestimoService.visualizarEmprestimo();
+    public ResponseEntity<?> visualizarEmprestimoCpf(@RequestParam("cpf") String cpf) {
+        return emprestimoService.visualizarEmprestimoCpf(cpf);
     }
     
 }
